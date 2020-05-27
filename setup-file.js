@@ -108,7 +108,7 @@ q_filenameFilter = function (callback) {
     // a Filename Filter Regex
     if (common.blank(setupConfig.filenameFilter) !== null) {
         dynamoConfig.Item.filenameFilterRegex = {
-            S: setupConfig.filenameFilter
+            S: setupConfig.filenameFilter.toLowerCase()
         };
     }
     callback(null);
